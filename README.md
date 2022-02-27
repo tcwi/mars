@@ -35,5 +35,5 @@ npm test
 
 A test coverage check can be performed using:
 ```
-npm test:coverage
+npm run test:coverage
 ```
