@@ -1,0 +1,15 @@
+{
+  "name": "mars",
+  "version": "1.0.0",
+  "description": "Command line tool to move robots around mars",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Tom Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
