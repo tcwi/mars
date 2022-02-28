@@ -15,15 +15,15 @@ test('loadInput reads valid text file and returns the grid size, initial state, 
         initialState: {
           x: 2,
           y: 3,
-          orientation: 'E'
+          orientation: 'E',
         },
-        commands: ['L', 'F', 'R', 'F', 'F']
+        commands: ['L', 'F', 'R', 'F', 'F'],
       },
       {
         initialState: {
           x: 0,
           y: 2,
-          orientation: 'N'
+          orientation: 'N',
         },
         commands: ['F', 'F', 'L', 'F', 'R', 'F', 'F'],
       },
@@ -40,15 +40,15 @@ test('loadInput handles text files with extra whitespace', async () => {
         initialState: {
           x: 2,
           y: 3,
-          orientation: 'E'
+          orientation: 'E',
         },
-        commands: ['L', 'F', 'R', 'F', 'F']
+        commands: ['L', 'F', 'R', 'F', 'F'],
       },
       {
         initialState: {
           x: 0,
           y: 2,
-          orientation: 'N'
+          orientation: 'N',
         },
         commands: ['F', 'F', 'L', 'F', 'R', 'F', 'F'],
       },
