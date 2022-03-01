@@ -6,6 +6,7 @@ I hit the three hour limit, so made a note of some other things I'd do if I had 
   - Could allow other robots to move if only one line is invalid for example
   - Could handle a missing or invalid file more gracefully rather than just a default error
   - Do some sort of input filetype validation
+  - If writing server code, I'd usually be catching, logging, and handling these errors, but felt it appropriate to report them to the user for this task.
 - Based on the example output, given the input `x y`, the grid contains squares `(0...x)` and `(0...y)`, so an input of `4` on the x axis, for example, is actually 5 squares wide. I'd have clarified this requirement upfront in a project usually.
 - Test more thoroughly
   - unit test for getGroupsFromRegex
