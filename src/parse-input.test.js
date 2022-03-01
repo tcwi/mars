@@ -15,8 +15,8 @@ test('createGrid throws an error if grid is provided in incorrect format', () =>
   );
 });
 
-test('createRobots parses commands for each robot', () => {
-  const robots = createRobots(['(2, 3, E) LFRFF', '(0, 2, N) FFLFRFF]']);
+test('createRobots parses state and commands for each robot', () => {
+  const robots = createRobots(['(2, 3, E) LFRFF', '(0, 2, N) FFLFRFF']);
   expect(robots).toEqual([
     {
       commands: ['L', 'F', 'R', 'F', 'F'],
@@ -29,12 +29,22 @@ test('createRobots parses commands for each robot', () => {
   ]);
 });
 
-test('createRobots throws an error if commands are provided in incorrect format', () => {
+test('createRobots throws an error if robot is provided in incorrect format', () => {
   expect(() => {
     createRobots(['invalid robots']);
   }).toThrow(
     new TypeError(
       'The provided input "invalid robots" is not valid - please refer to the documentation.'
+    )
+  );
+});
+
+test('createRobots throws an error if commands are provided in incorrect format', () => {
+  expect(() => {
+    createRobots(['(0, 2, N) FFXLFRFF']);
+  }).toThrow(
+    new TypeError(
+      'The provided input "(0, 2, N) FFXLFRFF" is not valid - please refer to the documentation.'
     )
   );
 });

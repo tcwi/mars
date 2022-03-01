@@ -10,13 +10,13 @@ const getGroupsFromRegex = (string, regex) => {
   }
 };
 
-const gridRegex = /(?<x>\d+) (?<y>\d+)/;
+const gridRegex = /^(?<x>\d+) (?<y>\d+)$/;
 
 export const createGrid = (gridString) =>
   getGroupsFromRegex(gridString, gridRegex);
 
 const robotRegex =
-  /\((?<x>\d+), (?<y>\d+), (?<orientation>[NESW])\) (?<commands>[LFR]+)/;
+  /^\((?<x>\d+), (?<y>\d+), (?<orientation>[NESW])\) (?<commands>[LFR]+)$/;
 
 export const createRobots = (robotStrings) =>
   robotStrings.map((robot) => {

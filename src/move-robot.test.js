@@ -61,7 +61,7 @@ test('moves robot backwards in y direction if facing S', () => {
   });
 });
 
-test('reports a robot as lost if it is moved off the grid', () => {
+test('reports a robot as lost with final state if it is moved off the grid', () => {
   const initialState = { x: 0, y: 1, orientation: 'W' };
   expect(moveRobot(initialState, grid, ['F'])).toEqual({
     x: 0,
