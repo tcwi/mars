@@ -58,6 +58,8 @@ const moveRobot = (state, grid, commands) => {
     return { ...state, lost: true };
   }
 
+  // Update from 2025 - when I originally wrote this I didn't realise tail call optimization
+  // had been removed from Node. I probably wouldn't write this recursive function without it!
   return moveRobot({ x: newX, y: newY, orientation }, grid, remainingCommands);
 };
 
